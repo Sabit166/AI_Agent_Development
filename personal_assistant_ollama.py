@@ -2,7 +2,6 @@ from langchain.llms import Ollama
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from datetime import datetime
-import json
 
 class PersonalAssistantAgent:
     def __init__(self):
