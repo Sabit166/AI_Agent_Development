@@ -25,7 +25,7 @@ set_tracing_disabled(disabled=True)
 
 
 class SkillGap(BaseModel):
-    skills
+    skills: List[str] = Field(description="List of skills the user wants to improve")
 
 class JobRecommender(BaseModel):
 
@@ -35,7 +35,7 @@ class CareerMateAgent(Agent):
     
 class UserProfile(BaseModel):
     name: str
-    skills: List[str]  # List of user skills
+    skills: List[str]  = Field(description="List of user skills")
     experience_years: Optional[int] = None
     education: Optional[str] = None
 
